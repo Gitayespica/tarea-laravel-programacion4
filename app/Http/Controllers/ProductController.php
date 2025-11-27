@@ -76,4 +76,8 @@ class ProductController extends Controller
     {
         $product->delete(); return response()->json(['message' => 'Producto eliminado']);
     }
+
+    public function activos() {
+       return Product::where('status', true)->get();
+   }
 }
