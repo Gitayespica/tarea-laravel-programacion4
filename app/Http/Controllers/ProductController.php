@@ -32,6 +32,7 @@ class ProductController extends Controller
        'descripcion' => 'required|string',
        'precio' => 'required|numeric',
        'stock' => 'required|integer',
+       'status' => 'boolean',
    ]);
    return Product::create($request->all());
     }
@@ -62,6 +63,7 @@ class ProductController extends Controller
        'descripcion' => 'required|string',
        'precio' => 'required|numeric',
        'stock' => 'required|integer',
+       'status' => 'boolean',
    ]);
    $product->update($request->all());
    return $product;
