@@ -11,4 +11,9 @@ class Product extends Model
       public function scopePrecioMinimo($query, $min) {
        return $query->where('precio', '>=', $min);
    }
+
+   protected static function factory() {
+        return ProductFactory::new();
+    }
 }
+
